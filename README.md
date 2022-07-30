@@ -4,7 +4,7 @@ This is just a collection of POC's I write for a variety of challenges.
 
 ### Summary
 
-This is a summary of the contents of this repo. 
+This is a summary of the challenges taken on in this repo. 
 
 #### DVWA
 
