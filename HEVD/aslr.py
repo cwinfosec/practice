@@ -1,9 +1,8 @@
 """
-Description: Vanilla Buffer Overflow via "TriggerBufferOverflowStack" HEVD 3.00
+Description: kASLR Bypass Companion Script
 Author: Cody Winkler
 Contact: @cwinfosec (twitter)
-Date: 10/6/2023
-Tested On: Microsoft Windows 7 6.1.7601 Service Pack 1 Build 7601 (x86_x64)
+Date: 11/5/2023
 """
 import ctypes
 import struct
@@ -22,7 +21,7 @@ psapi = ctypes.windll.psapi
 EnumDeviceDrivers = psapi.EnumDeviceDrivers
 EnumDeviceDrivers.argtypes = [
 	ctypes.POINTER(ctypes.c_void_p),			# *lpImageBase
-	ctypes.c_uint,								# cb
+	ctypes.c_uint,						# cb
 	ctypes.POINTER(ctypes.c_uint)]				# lpcbNeeded
 EnumDeviceDrivers.restype = ctypes.c_bool
 
